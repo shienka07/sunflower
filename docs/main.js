@@ -17,7 +17,7 @@ form.addEventListener('submit', async (event) => {
             {
             parts: [
                 {
-                text: "뒤에 입력한 프롬프트 초안을 PTCF(Persona, Task, Context, Format) 공식에 따라 보강하고 필요한 작업의 순서를 '대충-빨리-잘'로 구조화. " + promptInput.value + " 마크다운 문법을 절대 쓰지 말고 plain text로 작성할 것.",
+                text: "뒤에 입력한 프롬프트 초안을 PTCF(Persona, Task, Context, Format) 공식에 따라 보강하고 이 것에 대한 활용을 대충, 빨리, 잘의 단계로 서술. 마크다운이나 기타 꾸미는 특수문자 없이 간결하게 평문으로 작성. 프롬프트 초안 : {" + promptInput.value + "}",
                 },
             ],
             },
