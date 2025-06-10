@@ -17,7 +17,7 @@ form.addEventListener('submit', async (event) => {
             {
             parts: [
                 {
-                text: promptInput.value,
+                text: "뒤에 입력한 프롬프트 초안을 PTCF 공식에 따라 보강하고 '대충-빨리-잘'로 구조화. plain text로 작성할 것." + promptInput.value,
                 },
             ],
             },
@@ -27,7 +27,8 @@ form.addEventListener('submit', async (event) => {
     if (response.ok) {
         const data = await response.json();
         alert('응답: ' + JSON.stringify(data));
-        result.textContent = JSON.stringify(data);
+        // result.textContent = JSON.stringify(data);
+        result.innerHTML = data.candidates[0].content.parts[0].text;
     }
     else {
         alert('오류 발생: ' + response.statusText);
