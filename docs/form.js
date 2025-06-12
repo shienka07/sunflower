@@ -28,7 +28,21 @@ promptForm.addEventListener("submit", async (event) => {
       return;
     }
     const result = await response.json();
-    alert(JSON.stringify(result));
+    // alert(JSON.stringify(result));
+    // 결과를 화면에 표시
+    const promptDataId = document.querySelector("#promptDataId");
+    const promptDataQuestion = document.querySelector("#promptDataQuestion");
+    const promptDataAnswer = document.querySelector("#promptDataAnswer");
+    promptDataId.textContent = result.id;
+    promptDataQuestion.textContent = result.question;
+    promptDataAnswer.textContent = result.answer;
+    // 복사 관련
+    const shareLink = document.querySelector("#shareLink");
+    shareLink.value = `http://${location.hostname}/docs/history/?id=${result.id}`;
+    const openLink = document.querySelector("#openLink");
+    openLink.href = `http://${location.hostname}/docs/history/?id=${result.id}`;
+    const promptData = document.querySelector("#promptData");
+    promptData.style.display = "block";
   } finally {
     // 다 끝나면
     submitButton.disabled = false;
