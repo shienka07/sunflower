@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   promptDataQuestion.textContent = result.question;
   promptDataAnswer.textContent = result.answer;
   // 복사 관련
-  const pageUrl = "https://shienka07.github.io/sunflower/";
+  const pageUrl = "https://shienka07.github.io/sunflower";
   shareLink.value = `${pageUrl}/history/?id=${result.id}`;
   const promptData = document.querySelector("#promptData");
   promptData.style.display = "block";
