@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     return;
   }
   // QueryString(id) 처리
-  const baseUrl = "https://annoying-sunbae.onrender.com";
+  const baseUrl = "https://boot-sunflower-shienka07.onrender.com";
   const response = await fetch(`${baseUrl}/api/prompt/${promptId}`, {
     method: "GET",
     headers: {
