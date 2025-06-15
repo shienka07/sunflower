@@ -15,7 +15,7 @@ promptForm.addEventListener("submit", async (event) => {
   submitButton.disabled = true;
   // 프롬프트 처리
   try {
-    const baseUrl = "https://boot-sunflower-shienka07.onrender.com";
+    const baseUrl = "https://annoying-sunbae.onrender.com";
     const response = await fetch(`${baseUrl}/api/prompt`, {
       method: "POST",
       // Fetch시 직렬화하세요...
@@ -38,7 +38,7 @@ promptForm.addEventListener("submit", async (event) => {
     promptDataQuestion.textContent = result.question;
     promptDataAnswer.textContent = result.answer;
     // 복사 관련
-    const pageUrl = "https://shienka07.github.io/sunflower";
+    const pageUrl = "https://qus0in.github.io/sunflower";
     const shareLink = document.querySelector("#shareLink");
     shareLink.value = `${pageUrl}/history/?id=${result.id}`;
     const openLink = document.querySelector("#openLink");
